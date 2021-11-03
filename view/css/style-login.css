@@ -25,6 +25,3 @@ body{
     margin-bottom: 10px;
     transition: 0.5s;
 }
-#password-forgot:hover{
-    transform: scale(1.1);
-}
