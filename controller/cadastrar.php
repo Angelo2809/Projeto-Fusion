@@ -22,17 +22,17 @@
     $senha = addslashes($_POST['password']);
     $confirmarSenha =addslashes($_POST['confirm-password']);
     $celNumber = addslashes($_POST['cel-number']);
-    $birth = addslashes($_POST['nascimento']);
-    $nickname = addslashes($_POST['apelido']);
-    $gender = addslashes($_POST['select'])
+    $birth = addslashes($_POST['idade']);
+    $nickname = addslashes($_POST['nickname']);
+    $gender = addslashes($_POST['select']);
     
     //verificacao se esta vazio por php
         
-        $u->conectar("projeto_fusion", "localhost", "root", "");
+        $u->conectar("fusion_project", "localhost", "root", "");
         if($u->msgErro == ''){ //ok
             if($senha == $confirmarSenha){
                 if($email == $confirmEmail){
-                    if($u->cadastrar($firstName, $lastName, $email, $senha,$celNumber ,$birth, $nickname, $gender)){
+                    if($u->cadastrar($firstName, $lastName, $email, $senha,$celNumber,$birth, $nickname, $gender)){
                         ?>
                         <div class="msg-erro">cadastrado com sucesso</div> 
                         <?php
@@ -53,6 +53,9 @@
             }
         } else{
             echo "Erro :".$u->msgErro;
+            ?>
+            <div>bosta</div>
+            <?php
         }
     
 ?>

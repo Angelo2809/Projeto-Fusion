@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Fusion</title>
     <link rel="stylesheet" href="view/css/estilo-form.css">
-    <script src="view/js/form-script.js" defer></script>
+    <!--<script src="view/js/form-script.js" defer></script>-->
 </head>
 <body>
     <div>
         <h1>Fusion</h1>
         <p id="subtitle">Inscreva-se para fazer parte do Fusion!</p>
         <div class="division"></div>
-        <form action="">
+        <form action="controller/cadastrar.php" method="post">
             <div>
                 <p>Qual é seu nome?</p>
                 <input type="text" name="first-name" id="first-name" placeholder="Nome" pattern="[a-zA-Záãâéêíîóôõú\s]+$" required> 
@@ -42,10 +42,12 @@
                 <p>Qual o seu telefone?</p>
                 <input type="text" name="cel-number" id="cel-number" placeholder="(00) 0000-0000">
             </div>
+            
             <div>
-                <p>Qual é a sua data de nascimento?</p>
-                <input type="date" id="nascimento" name="nascimento">
+                <p>Quando você nasceu?</p>
+                <input type="date" id="idade" name="idade">
             </div>
+            
             <div>
                 <p>Digite um nome de perfil</p>
                 <input type="text" name="nickname" id="nickname" placeholder="Insira um nome de perfil" required>
@@ -53,8 +55,8 @@
             <div>
                 <p> Qual o seu gênero?</p>
                 <select name="select" id="select">
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino" >Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino" >Feminino</option>
                     <option value="Outro" selected>Outro</option>
                   </select>
             </div>

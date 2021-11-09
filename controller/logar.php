@@ -12,16 +12,16 @@
 
 
 <?php
-    require_once 'usuarios.php';
+    require_once '../model/usuarios.php';
     $u = new usuario;
     
     $email = addslashes($_POST['email']);
     $senha = addslashes($_POST['senha']);
 
-    $u->conectar("projeto_fusion", "localhost", "root", "");
+    $u->conectar("fusion_project", "localhost", "root", "");
     if($u->msgErro ==""){
         if($u->logar($email, $senha)){
-            header("location: acesso.php");
+            header("location: ../acesso.php");
         }else{
             ?>
             <div class="msg-erro">Email e/ou senha estão errados!</div>
