@@ -13,14 +13,14 @@
         <h1>Fusion</h1>
         <p id="subtitle">Continue para efetuar o login</p>
         <div class="division"></div>
-        <form action="index.html">
+        <form action="controller/logar.php" method="post">
             <div>
-                <p>Digite seu email ou telefone</p>
-                <input type="text" name="first-name" id="first-name" placeholder="Email ou telefone"  required> 
+                <p>Digite seu email</p>
+                <input type="text" name="email" id="email" placeholder="Digite seu email"  required> 
             </div>
             <div>
                 <p>Digite sua senha</p>
-                <input type="text" name="last-name" id="last-name" placeholder="Digite sua senha" required>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
             </div>
             <div>
                 <input type="checkbox" name="remember" id="remember">
@@ -32,6 +32,7 @@
             <input type="submit" value="Entrar" id="submit-btn">
             <div>
         </form>
+        <p>Não possui uma conta ainda? <a href="formulario.html">Crie uma agora!</a></p>
     </div>
 </body>
 </html>
