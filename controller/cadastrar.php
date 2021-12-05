@@ -12,7 +12,7 @@
 
 
 <?php
-    require_once 'usuarios.php';
+    require_once '../model/usuarios.php';
     $u = new usuario;
     
     $firstName = addslashes($_POST['first-name']);

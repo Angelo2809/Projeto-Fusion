@@ -50,11 +50,17 @@ header
         align-items: center
         justify-content: space-around
         color: white
-        img
-            height: 250px
-            width: 250px
-        h2
-            text-align: center
+        .photo-name
+            display: flex
+            flex-direction: column
+            align-items: center
+            img
+                height: 250px
+                width: 250px
+                
+            h2
+                text-align: center
+                width: 100%
         .btns
             hr
                 margin-top: 10px
@@ -80,7 +86,7 @@ header
         text-align: center
         font-style: italic
         margin-top: 30px
-        font-size: 40px
+        font-size: 30px
         
 
     .info
@@ -89,14 +95,16 @@ header
             margin-left: 20px
             margin-top: 20px
         &-title
-            font-size: 26px
+            font-size: 30px
+            font-style: bold
         .item
             margin-top: 5px
             p
                 margin-top: 10px
-                font-size: 20px
+                font-size: 24px
+                font-weight: bolder
                 font-style: italic
-                color: #505050
+                color: #888888
 
 .on
     color: variables.$secundary-color

@@ -56,6 +56,60 @@ class Usuario{
 
         }
     }
+
+    public function trocarApelido($id, $novoApelido){
+        global $pdo;
+        $sql = $pdo->prepare("UPDATE usuarios SET nickname = :a WHERE id = :i");
+        $sql->bindValue(":a", $novoApelido);
+        $sql->bindValue(":i", $id);
+        $resultado = $sql->execute();
+        if(isset($resultado)){
+            return true; // trocado com sucesso
+        }
+        else
+            return false;
+    }
+
+    public function verificarSenha($id, $senha){
+        $senha = md5($senha);
+        global $pdo;
+        $sql = $pdo->prepare("SELECT senha FROM usuarios WHERE id = :i");
+        $sql->bindValue(":i", $id);
+        $sql->execute();
+        if($sql->rowCount() > 0){
+            $dado = $sql->fetch();
+            if($dado['senha'] == $senha){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }else{
+            return false;
+
+        }
+
+    }
+
+    public function trocarSenha($id, $novaSenha){
+        $novaSenha = md5($novaSenha);
+        global $pdo;
+        $sql = $pdo->prepare("UPDATE usuarios SET senha = :s WHERE id = :i");
+        $sql->bindValue(":s", $novaSenha);
+        $sql->bindValue(":i", $id);
+        $sql->execute();
+        return true; // trocado com sucesso
+
+    }
+
+    public function recuperarDados($id){
+        global $pdo;
+        $sql = $pdo->prepare("SELECT fistname, lastname, celnumber, email, birth, nickname, gender FROM usuarios WHERE id = :i");
+        $sql->bindValue(":i", $id);
+        $sql->execute();
+        $dado = $sql->fetch();
+        return $dado;
+    }
 }
 
 ?>

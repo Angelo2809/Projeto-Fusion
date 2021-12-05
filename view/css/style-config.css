@@ -58,12 +58,18 @@ header ul li a:hover {
   justify-content: space-around;
   color: white;
 }
-.container .menu img {
+.container .menu .photo-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .menu .photo-name img {
   height: 250px;
   width: 250px;
 }
-.container .menu h2 {
+.container .menu .photo-name h2 {
   text-align: center;
+  width: 100%;
 }
 .container .menu .btns hr {
   margin-top: 10px;
@@ -96,7 +102,7 @@ header ul li a:hover {
   text-align: center;
   font-style: italic;
   margin-top: 30px;
-  font-size: 40px;
+  font-size: 30px;
 }
 .container .info {
   width: 70%;
@@ -106,16 +112,18 @@ header ul li a:hover {
   margin-top: 20px;
 }
 .container .info-title {
-  font-size: 26px;
+  font-size: 30px;
+  font-style: bold;
 }
 .container .info .item {
   margin-top: 5px;
 }
 .container .info .item p {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bolder;
   font-style: italic;
-  color: #505050;
+  color: #888888;
 }
 
 .on {
