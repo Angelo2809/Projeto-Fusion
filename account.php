@@ -32,7 +32,7 @@
                 <li><a href="">Suporte</a></li>
                 <li><a href="acesso.php">Voltar pra sei lá</a></li>
                 <li><?php
-                        echo $dado['nickname'];
+                        echo $dado['nickname']; # apelido do usuário
                     ?>
                 </li>
             </ul>
