@@ -32,14 +32,14 @@
             <li><a href="">Option 4</a></li>
 
         </ul>
-        <p>Boa tarde, <?php echo $dado['nickname'] ?></p>
+        <p>Boa tarde, <?php echo $dado['nickname'] ?></p> <!-- Apelido do usuário  -->
     </header>
     <div class="config">
         <h2>Menu</h2>
         <div class="config-area">
             <div id="img-area">
                 <img src="view/img/foto-2.jpeg" height="250px">
-                <p><?php echo $dado['fistname']. " ". $dado['lastname'] ?></p>
+                <p><?php echo $dado['fistname']. " ". $dado['lastname'] ?></p> <!-- Nome do usuário  -->
             </div>
             <div>
                 <ul>
